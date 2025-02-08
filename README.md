@@ -35,6 +35,7 @@
 |  08  | Servidor Teste com Docker | Instalar e configurar o Docker para criar um ambiente de desenvolvimento   | 
 |  09  | Servidor MySQL | Criar um Servidor MySQL e Criar um Banco de Teste |
 |  10  | Kubernetes e Nginx | Criar um pod e expor o serviço Nginx usando o Kubernetes | 
+|  11  | Servidor de E-mail | Criar um servidor de e-mail e testar o envio a partir dele | 
 
 </div> 
 </details>
