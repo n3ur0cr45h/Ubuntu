@@ -34,6 +34,7 @@
 |  07  | Instalação e Configuração Nagios | Instalar e configurar com sucesso o Nagios para iniciar o monitoramento   | 
 |  08  | Servidor Teste com Docker | Instalar e configurar o Docker para criar um ambiente de desenvolvimento   | 
 |  09  | Servidor MySQL | Criar um Servidor MySQL e Criar um Banco de Teste |
+|  10  | Kubernetes e Nginx | Criar um pod e expor o serviço Nginx usando o Kubernetes | 
 
 </div> 
 </details>
