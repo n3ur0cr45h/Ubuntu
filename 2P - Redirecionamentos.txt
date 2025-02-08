@@ -1,0 +1,21 @@
+1. apt install apache 2 
+
+2. vi /etc/apache2/sites-available/000-default.comf 
+
+		ServerName (nome do domínio - pode ser também IP, "localhost")
+		Redirect pernament / https://(Redirecionamento)
+		
+3. systemctl restart apache2
+
+4. systemctl stop apache2 
+
+5. apt install nginx 
+
+6. systemctl status nginx
+
+7. vi /etc/nginx/sites-available/default 
+
+		server {
+		    server_name www.exemplo.com - IP ou "localhost";
+            return 301 https://(Redirecionamento);
+		}

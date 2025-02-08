@@ -1,0 +1,102 @@
+#Referência: https://www.baeldung.com/linux/nagios-install-configure
+
+
+
+1. apt install wget unzip curl openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2 -y
+
+2. mkdir /Nagios 
+
+3. cd /Nagios 
+
+4. wget https://github.com/NagiosEnterprises/nagioscore/releases/download/nagios-4.5.9/nagios-4.5.9.tar.gz
+
+5. tar -zxvf nagios-4.5.9.tar.gz
+
+6. rm-rf nagios-4.5.9.tar.gz 
+
+7. cd nagios-4.5.9
+
+8. ./configure
+
+9. make all 
+
+10. make install-groups-users
+
+11. usermod -a -G nagios www-data 
+
+12. make install 
+
+13. make install-init 
+
+14. make install-config 
+
+15. make install-webconf 
+
+16. a2enmod rewrite cgi 
+
+17. systemctl restart apache2 
+
+18. htpasswd -c /usr/local/nagios/etc/htpasswd.users admin 
+
+
+
+19. cd /Nagios 
+
+20. wget https://nagios-plugins.org/download/nagios-plugins-2.4.9.tar.gz
+
+21. tar -zxvf nagios-plugins-2.4.9.tar.gz   
+
+22. cd nagios-plugins-2.4.9
+
+23. sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios 
+
+24. make install  
+
+
+
+25. cd /Nagios 
+
+26. wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-4.1.3/nrpe-4.1.3.tar.gz 
+
+27. tar zxf nrpe-4.1.3.tar.gz 
+
+28. rm -rf nrpe-4.1.3.tar.gz 
+
+29. cd nrpe-4.1.3
+
+30. ./configure 
+
+31. make check_nrpe 
+
+32. make install-plugin 
+
+
+
+33. vi /usr/local/nagios/etc/nagios.cfg
+
+		cfg_dir=/usr/local/nagios/etc/servers
+		
+34. mkdir /usr/local/nagios/etc/servers 
+
+35. vi /usr/local/nagios/etc/objects/commands.cfg 
+
+		define command{
+			command_name check_nrpe
+			command_line $USER1$/check_nrpe -H $HOSTADDRESS$ -c $ARG1$
+		}
+
+		
+
+
+36. htpasswd /usr/local/nagios/etc/htpasswd.users nagios admin 
+
+37. vi /usr/local/nagios/etc/objects/switch.cfg 
+
+     (Nesse arquivo, é onde inclui novos hosts, hostgroups e serviços) 
+	 
+38. systemctl restart nagios
+
+39. http://(IP)/nagios 
+
+      nagiosadmin 
+	   

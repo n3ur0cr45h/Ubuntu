@@ -1,0 +1,23 @@
+1. apt install apache2 -y
+
+2. curl http://localhost:80
+
+3. apt install php libapache2-mod-php -y
+
+4. vi /var/www/html/info.php 
+ 
+      <?php
+      phpinfo();
+      ?>
+  
+5. vi var/www/html/teste.php 
+
+      <?php
+      echo "Teste Ubuntu";
+      ?>
+  
+6. curl http://localhost:80/info.php 
+
+7. curl http://localhost:80/teste.php
+
+   

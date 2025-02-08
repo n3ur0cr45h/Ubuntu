@@ -1,0 +1,27 @@
+
+1. apt install mysql-server 
+
+2. systemctl status mysql 
+
+3. mysql -u root -p 
+
+4. CREATE DATABASE banco_teste;
+
+5. CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
+
+6. GRANT ALL PRIVILEGES ON banco_teste.* TO 'usuario'@'localhost';
+
+7. FLUSH PRIVILEGES; 
+
+8. USE banco_teste; 
+
+9. CREATE TABLE clientes (
+      id INT AUTO_INCREMENT PRIMARY KEY, 
+      nome VARCHAR(100),
+      email VARCHAR(100),
+      data_cadastro DATE
+      );
+
+10. INSERT INTO clinetes (nome, email, data_cadastro) VALUES ('João Silva', 'joao.silva@uol.com', '2025-02-08');
+
+11. SELECT * from clientes; 

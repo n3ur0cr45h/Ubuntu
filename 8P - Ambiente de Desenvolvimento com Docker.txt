@@ -1,0 +1,71 @@
+
+1. apt update -y && apt upgrade -y 
+
+2. curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - 
+
+3. add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+4. apt install apt-transport-https ca-certificates curl software-proprierties-common docker-ce -y 
+
+
+
+5. apt install docker-ce 
+
+6. docker --version 
+
+7. docker run hello-world 
+
+
+
+
+8. mkdir /projeto_docker && cd /projeto_docker
+
+9.  vi Dockerfile 
+	
+		FROM python:3.13
+		
+		WORKDIR /app 
+		
+		COPY . /app 
+		
+		RUN pip install -r requirements.txt 
+		
+		CMD ["python", "app.py"]
+
+
+10. vi docker-compose.yml 
+
+		version: '3'
+		services: 
+		  web: 
+		    builda: .
+			ports:
+			  - "5000:5000"
+			volumes: 
+			  - .:/app 
+			environment:
+			  - ENV=development 
+
+11. vi requirements.txt 
+
+        flask 
+
+12. app.py 
+
+    from flask import Flask
+	app = Flask(__name__)
+	
+	def hello_world():
+	    return 'Hello, World!'
+		
+	if __name__ == '__main__':
+	    app.run(host='0.0.0.0', port=5000)
+		
+13. docker-compose build 
+
+14. docker-compose up 
+
+15. http://(IP):5000
+
+
+

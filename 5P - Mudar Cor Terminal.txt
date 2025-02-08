@@ -1,0 +1,39 @@
+
+1. vi ~/.bashrc
+   
+	PS1='\[\e[1;32m\]\u@\h:\w\$ '
+        export LS_COLORS='di=1;32:fi=1;32:ln=1;32:ex=1;32:*.*=1;32'
+
+
+2. source ~/.bashrc 
+
+3 vi /etc/bash.bashrc
+
+	PS1='\[\e[1;32m\]\u@\h:\w\> '
+        export LS_COLORS='di=1;32:fi=1;32:ln=1;32:ex=1;32:*.*=1;32'
+		
+4. source /etc/bash.bashrc 
+
+5. vi /etc/vim/vimrc
+
+highlight Variable ctermfg=green
+
+
+
+
+# Anotações (O mesmo vale para WSL)
+
+-- Cores para PS1:
+
+Black       0;30     Dark Gray     1;30
+Blue        0;34     Light Blue    1;34
+Green       0;32     Light Green   1;32
+Cyan        0;36     Light Cyan    1;36
+Red         0;31     Light Red     1;31
+Purple      0;35     Light Purple  1;35
+Brown       0;33     Yellow        1;33
+Light Gray  0;37     White         1;37
+
+-- Cores para o VI / VIM: todas em inglês (white, black...) 
+
+:echo synIDattr(synID(line('.'), col('.'), 1), 'name') - Com o cursor em cima de onde deseja saber qual é o atributo pra poder mudar 

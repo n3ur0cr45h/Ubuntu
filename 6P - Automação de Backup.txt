@@ -1,0 +1,34 @@
+
+1. apt install rsync 
+
+2. mkdir /RSync /RSync/Arquivos /RSync/Logs
+
+3. touch /RSync/Arquivos/arquivo[1..5]
+
+4. vi. backup.sh 
+
+    mkdir /RSync/Backup_2 /RSync/Backup_3
+
+    iOrigem="/RSync/Arquivos"
+    
+    iBackup1="/RSync/Backup_1"
+    iBackup2="/RSync/Backup_2"
+    iBackup3="/RSync/Backup_3"
+
+    rsync -av --delete $iOrigem/* $iBackup1/
+       
+       rm -rf
+
+       cp $iBackup2/* $iBackup3/
+
+       cp $iBackup1/* $iBackup2/
+
+    echo "Backup Realizado em $(Date)" >> /RSync/Logs/Logs.txt
+
+5. chmod 777 backup.sh
+
+6. ./backup.sh
+
+7. ls -l Backup_1 Backup_2 Backup_3 
+ 
+8. cat /RSync/Logs/Logs.txt
