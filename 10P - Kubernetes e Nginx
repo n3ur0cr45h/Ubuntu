@@ -1,0 +1,32 @@
+
+
+
+
+1. snap install microk8s --classic 
+
+2. usermod -a -G microk8s $USER 
+
+3. chown -f -R $USER ~/.kube
+
+4. microk8s kubectl create deployment nginx --image=nginx 
+
+5. microk8s kubectl expose deployment nginx --port=80 --type=NodePort
+
+6. microk8s kubectl get svc 
+
+7. microks kubectl exec -it (pod) -- /bin/bash 
+
+8. echo "Teste Kubernetes - Pod Nginx" > /usr/share/nginx/html/index.html 
+
+9. exit 
+
+10. microk8s kubectl get svc 
+
+11. curl http://localhost:(porta) 
+
+12. Em outra máquina - http://(servidor):(mesma porta acima) 
+
+13. microk8s kubectl delete pod (pod)
+
+Obs.: Aumentar a quantidade de processadores da VM - no caso, usando o Virtual Box. 
+      Se tiver pouco processamento, dará erro de "Unable to Upgrade Connection" 
