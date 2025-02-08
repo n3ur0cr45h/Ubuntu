@@ -8,10 +8,11 @@
 
 
 <div align="Right">
+<h6>
 <strong>Participação de Mercado</strong>
-<br><strong>Desktop</strong>: <span style='color: ;'>54%</span> 
-<br><strong>Servidor</strong>: <span style='color: ;'>34%</span>
-
+<br><strong>Desktop</strong>: 55%
+<br><strong>Servidor</strong>: 35%
+</h6>  
 </div>
 
 ----
