@@ -1,1 +1,17 @@
 
+#Não foi tão fácil assim - por ter poucos comandos. Existem muitas configurações pra realizar com DNS e o main.cf
+
+1. apt instal postfix dovecot-core dovecot-imapd dovecot-pop3d swaks 
+
+2. vi /etc/hosts 
+
+3. vi /etc/postfix/main.cf
+
+3. useradd -m (usuario do e-mail) 
+
+4. useradd -m (outro usuário de e-mail) 
+
+5. swaks --to usuario2@dominiocriado.com -- from usuario1@dominiocriado.com --server mail.dominiocriado.com 
+
+6. cat /var/log/mail.log
+
