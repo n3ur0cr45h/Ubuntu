@@ -22,13 +22,12 @@
 <div align="Left"> 
 <br>
   
- <h5><b> 1. Mudança de Layout de Teclado:</h5></b> 
- <code>loadkeys br</code>
+<h5><b> 1. Mudança de Layout de Teclado:</h5></b> 
+<code>loadkeys br</code>
    
- <h5><b> 2. Mudança de Horário:</h5></b> 
+<h5><b> 2. Mudança de Horário:</h5></b> 
  <code>timedatectl list-timezones | grep (Estado / País que deseja)
- timedatectl set-timezone America/Sao_Paulo
- date
+ timedatectl set-timezone America/Sao_Paulo && date
 </code>
    
 </div> 
