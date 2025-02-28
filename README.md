@@ -6,6 +6,13 @@
 </a>
 </div>
 
+<div align="Right">
+<h6>
+<strong>Documentação</strong>
+<br><strong>https://help.ubuntu.com/</strong>
+</h6>  
+</div>
+
 
 <div align="Right">
 <h6>
