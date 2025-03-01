@@ -30,11 +30,9 @@
 <br>
   
 <h5><b> 1. Mudança de Layout de Teclado:</h5></b> 
-<code>
-  loadkeys br
-  vi /etc/default/keyboard
-  XKBLAYOUT="br"
-</code>
+<code>loadkeys br
+vi /etc/default/keyboard
+XKBLAYOUT="br"</code>
 
    
 <h5><b> 2. Mudança de Horário:</h5></b> 
