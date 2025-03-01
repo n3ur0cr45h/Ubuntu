@@ -43,7 +43,7 @@ XKBLAYOUT="br"</code>
 <h5><b> 3. Listar Pacotes Instalados:</h5></b> 
  <code>dpkg --list
  apt list --installed
- </code>
+</code>
    
 </div> 
 </details>
